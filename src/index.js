@@ -13,6 +13,23 @@ const staticPath = path.join(__dirname, "../public")
 app.use(express.static(staticPath))
 
 
+// https://stackoverflow.com/questions/66724768/express-js-staticpath-problem-css-not-being-applied-on-one-page-while-hbs-not/66732509?noredirect=1#comment117969112_66732509
+///////////////////////////////////////////////////////////////////////////
+//                                                                       //
+//              ---------------S O L V E D--------------                 //
+//                                                                       //
+//                                                                       //
+// This Code tells express k hmari static files kis folder mai pari hain //
+// Sab images, css, javascript files extra public folder mai aye ga      //
+// Basically front-end sara public mai para hoga                         //
+//                                                                       //
+//          const staticPath = path.join(__dirname, "../public")         //
+//          app.use("/public", express.static(staticPath))               //
+//                                                                       //
+/////////////////////////////////////////////////////////////////////////// 
+
+
+
 // Customizing views directory
 const templatePath = path.join(__dirname, "../templates/views")
 app.set("views", templatePath)
